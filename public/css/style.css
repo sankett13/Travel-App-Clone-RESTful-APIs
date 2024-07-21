@@ -1,0 +1,208 @@
+body{
+    
+    background-color: white ;
+    
+}
+
+
+
+
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 1rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        margin: 0;
+    }
+
+    .navbar .nav-links a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+
+
+/* Getstartedbutton */
+
+.homebutton {
+    display: block;
+    margin: 10rem auto; /* Center the button horizontally */
+    padding: 1rem 2rem; /* Increase padding for a bigger button */
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(73, 181, 248); /* Primary color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.homebutton:hover {
+    background-color:goldenrod; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+
+
+
+
+/* footer */
+/* .footer-info {
+    background-color: #575757;
+   
+}
+
+
+.f-brand {
+    color: #fff;
+}
+
+.f-links{
+    color: #fff;
+} */
+
+
+
+
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem); /* Three cards per row with gap */
+    max-width: calc(33.333% - 1rem); /* Three cards per row with gap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    display: block;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.card-location {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 1rem); /* Two cards per row on smaller screens */
+        max-width: calc(50% - 1rem); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* One card per row on the smallest screens */
+        max-width: 100%; /* One card per row on the smallest screens */
+    }
+}

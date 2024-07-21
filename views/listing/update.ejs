@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Listing</title>
+</head> -->
+<% layout("/layouts/boilerplate.ejs") -%>
+<body>
+    <h3>Update Your Listings</h3>
+    <form method="post" action="/listings/<%=currListing._id%>?_method=PUT">
+        <input type="text" name="listing[title]" value="<%=currListing.title%>">
+        <br><br>
+        <textarea name="listing[description]" rows="5" cols="30"><%=currListing.description%></textarea>
+        <br><br>
+        <input type="text" name="listing[image]" value="<%=currListing.image%>">
+        <br><br>
+        <input type="number" name="listing[price]" value="<%=currListing.price%>">
+        <br><br>
+        <input type="text" name="listing[location]" value="<%=currListing.location%>">
+        <br><br>
+        <input type="text" name="listing[country]" value="<%=currListing.country%>">
+        <br><br>
+        <button>Save Edit</button>
+    </form>
+    
+</body>
+<!-- </html> -->
